@@ -3,11 +3,6 @@
 # Recipe: default
 #
 
-ohai_plugin 'acme_sh' do
-  source_file 'plugins/acme_sh.rb.erb'
-  resource :template
-end
-
 git '/root/acme.sh' do
   repository 'https://github.com/Neilpang/acme.sh.git'
   revision node['acme_sh']['version']
