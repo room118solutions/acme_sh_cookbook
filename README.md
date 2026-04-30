@@ -17,6 +17,6 @@ bash 'issue letsencrypt cert and reload nginx' do
       --reloadcmd "service nginx force-reload"
   BASH
 
-  not_if { ::Dir.exists?("/root/.acme.sh/example.com") }
+  not_if { ::Dir.exist?("/root/.acme.sh/example.com") }
 end
 ```
