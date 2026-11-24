@@ -3,6 +3,8 @@
 # Recipe: default
 #
 
+git_client 'default'
+
 git '/root/acme.sh' do
   repository 'https://github.com/Neilpang/acme.sh.git'
   revision node['acme_sh']['version']
